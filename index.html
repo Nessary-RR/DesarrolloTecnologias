@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadoras Financieras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>📊 Calculadoras Financieras</h1>
+
+    <div class="menu">
+      <button onclick="mostrar('consumo')">Préstamo Consumo</button>
+      <button onclick="mostrar('hipotecario')">Préstamo Hipotecario</button>
+      <button onclick="mostrar('inversion')">Inversiones</button>
+    </div>
+
+    <!-- PRÉSTAMO CONSUMO -->
+    <div id="consumo" class="calculadora">
+      <h2>💳 Préstamo de Consumo</h2>
+      <input type="number" id="montoConsumo" placeholder="Monto del préstamo">
+      <input type="number" id="tasaConsumo" placeholder="Tasa anual (%)">
+      <input type="number" id="mesesConsumo" placeholder="Plazo (meses)">
+      <button onclick="calcularConsumo()">Calcular</button>
+      <p id="resultadoConsumo"></p>
+    </div>
+
+    <!-- PRÉSTAMO HIPOTECARIO -->
+    <div id="hipotecario" class="calculadora">
+      <h2>🏠 Préstamo Hipotecario</h2>
+      <input type="number" id="montoHipoteca" placeholder="Monto del préstamo">
+      <input type="number" id="tasaHipoteca" placeholder="Tasa anual (%)">
+      <input type="number" id="añosHipoteca" placeholder="Plazo (años)">
+      <button onclick="calcularHipoteca()">Calcular</button>
+      <p id="resultadoHipoteca"></p>
+    </div>
+
+    <!-- INVERSIONES -->
+    <div id="inversion" class="calculadora">
+      <h2>📈 Cálculo de Inversiones</h2>
+      <input type="number" id="capital" placeholder="Capital inicial">
+      <input type="number" id="tasaInversion" placeholder="Tasa anual (%)">
+      <input type="number" id="añosInversion" placeholder="Años">
+      <button onclick="calcularInversion()">Calcular</button>
+      <p id="resultadoInversion"></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
